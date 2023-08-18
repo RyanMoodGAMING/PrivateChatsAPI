@@ -1,303 +1,153 @@
-package me.ryanmood.privatechats.api.handlers.chats;
+package me.ryanmood.privatechats.spigot.handlers.chats;
 
-import lombok.Getter;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.IllegalPluginAccessException;
 
-import java.util.ArrayList;
+import javax.annotation.Nullable;
 import java.util.List;
-import java.util.Map;
 
 public class CustomChat {
 
-    private static Map<String, CustomChat> chatsData = PrivateChats.getInstance().getChatHandler().getCustomChatsData();
+    public List<Player> getToggledPlayers() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
-    @Getter
-    private List<Player> toggledPlayers = new ArrayList<>();
-    @Getter
-    private List<Player> hiddenPlayers = new ArrayList<>();
+    public List<Player> getHiddenPlayers() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
-    @Getter
-    @NotNull
-    private String name;
-    @Getter
-    @Nullable
-    private List<String> commands;
-    @Getter
-    @Nullable
-    private String chatPrefix;
-    @Getter
-    @NotNull
-    private Permission sendPerm;
-    @Getter
-    @NotNull
-    private Permission readPerm;
-    @Getter
-    @Nullable
-    private String formatMessage;
-    @Getter
-    @Nullable
-    private String formatEvent;
-    @Getter
-    private boolean eventMessage;
-    @Getter
-    private boolean sentMessage;
-    @Getter
-    private boolean console;
-    @Getter
-    private boolean toggleEnabled;
-    @Getter
-    private boolean useCommandsAsToggle;
-    @Getter
-    @Nullable
-    private String toggleMessage;
-    @Getter
-    @Nullable
-    private List<String> toggleCommands;
-    @Getter
-    private boolean hideEnabled;
-    @Getter
-    @Nullable
-    private String hideMessage;
-    @Getter
-    @Nullable
-    private List<String> hideCommands;
+    public String getName() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
-    public CustomChat(@NotNull String name, @Nullable List<String> commands, @Nullable String chat_prefix, @NotNull Permission send_perm,
-                      @NotNull Permission read_perm, @Nullable String format_message, @Nullable String format_event, boolean event_message, boolean sent_message,
-                      boolean console, boolean toggle_enabled, boolean useCommandsAsToggle, @Nullable String toggle_message, @Nullable List<String> toggle_commands,
-                      boolean hideEnabled, @Nullable String hideMessage, @Nullable List<String> hideCommands) {
-        this.name = name;
-        this.commands = commands;
-        this.chatPrefix = chat_prefix;
-        this.sendPerm = send_perm;
-        this.readPerm = read_perm;
-        this.formatMessage = format_message;
-        this.formatEvent = format_event;
-        this.eventMessage = event_message;
-        this.sentMessage = sent_message;
-        this.console = console;
-        this.toggleEnabled = toggle_enabled;
-        this.useCommandsAsToggle = useCommandsAsToggle;
-        this.toggleMessage = toggle_message;
-        this.toggleCommands = toggle_commands;
-        this.hideEnabled = hideEnabled;
-        this.hideMessage = hideMessage;
-        this.hideCommands = hideCommands;
+    public List<String> getCommands() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
-        this.addCommand();
+    public String getChatPrefix() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public Permission getSendPerm() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public Permission getReadPerm() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public String getFormatMessage() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public String getFormatEvent() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public boolean isEventMessage() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public boolean isSentMessage() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public boolean isConsole() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public boolean isToggleEnabled() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public boolean isCommandsAsToggle() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public String getToggleMessage() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public List<String> getToggleCommands() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public boolean isHideEnabled() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public String getHideMessage() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public List<String> getHideCommands() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public boolean isChatPrefix() {
-        if (this.chatPrefix == null || this.chatPrefix.equals("")) {
-            return false;
-        } else {
-            return true;
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public String getCommand() {
-        if (this.commands == null) return null;
-        return this.commands.get(0);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public String[] getAliases() {
-        List<String> aliases = new ArrayList<>();
-        if (this.commands == null) return aliases.stream().toArray(String[]::new);
-        if (this.commands.size() > 1) {
-            aliases.addAll(this.commands.subList(1, this.commands.size()));
-        }
-        return aliases.stream().toArray(String[]::new);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public String getToggleCommand() {
-        if (this.toggleEnabled && this.toggleCommands != null) {
-            return this.toggleCommands.get(0);
-        } else {
-            return null;
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public String[] getToggleAliases() {
-        List<String> aliases = new ArrayList<>();
-        if (this.toggleEnabled && this.toggleCommands != null) {
-            if (this.toggleCommands.size() > 1) {
-                aliases.addAll(this.toggleCommands.subList(1, this.toggleCommands.size()));
-            }
-        }
-        return aliases.stream().toArray(String[]::new);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public String getHideCommand() {
-        if (this.isHideEnabled() && this.hideCommands != null) {
-            return this.hideCommands.get(0);
-        } else {
-            return null;
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public String[] getHideAliases() {
-        List<String> aliases = new ArrayList<>();
-        if (this.isHideEnabled() && this.hideCommands != null) {
-            aliases.addAll(this.hideCommands.subList(1, this.hideCommands.size()));
-        }
-        return aliases.stream().toArray(String[]::new);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void toggleRemove(Player player) {
-        this.toggledPlayers.remove(player);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void toggleAdd(Player player) {
-        this.toggledPlayers.add(player);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void hiddenRemove(Player player) {
-        this.hiddenPlayers.remove(player);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void hiddenAdd(Player player) {
-        this.hiddenPlayers.add(player);
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public static CustomChat getByChatPrefix(String chat_prefix) {
-        for (CustomChat chat : chatsData.values()) {
-            if (!chat.isChatPrefix()) continue;
-            if (chat_prefix.equalsIgnoreCase(chat.getChatPrefix())) {
-                return chat;
-            }
-        }
-        return null;
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void sendMessage(@Nullable Player player, String message) {
-        boolean console = false;
-        if (player == null) {
-            console = true;
-        }
-
-        ChatMessageSentEvent event = new ChatMessageSentEvent(this, console, player, message);
-        Bukkit.getScheduler().runTask(PrivateChats.getInstance(), () -> Bukkit.getPluginManager().callEvent(event));
-        if (event.isCancelled()) return;
-
-        if (this.getFormatMessage() == null) {
-            if (player != null) {
-                RyMessageUtils.sendPlayer(player, RyMessageUtils.getErrorPrefix() +
-                        "I couldn't send that message as format_message is invalid for this chat.");
-            } else {
-                RyMessageUtils.sendConsole(false, RyMessageUtils.getErrorPrefix() +
-                        "I couldn't send that message as format_message is invalid for this chat.");
-            }
-            return;
-        }
-
-        for (Player online : Bukkit.getOnlinePlayers()) {
-            if (!online.hasPermission(this.getReadPerm())) continue;
-            if (this.hiddenPlayers.contains(online)) continue;
-
-            RyMessageUtils.sendPlayer(online, this.getFormatMessage()
-                    .replace("%player%", console ? Config.getCONSOLE_NAME() : player.getName())
-                    .replace("%message%", message));
-        }
-
-        if (this.console) {
-            RyMessageUtils.sendConsole(false, this.getFormatMessage()
-                    .replace("%player%", console ? Config.getCONSOLE_NAME() : player.getName())
-                    .replace("%message%", message));
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
 
     public void sendEventMessage(Player player, String eventName, String eventMessage) {
-        if (this.getFormatEvent() == null) {
-            RyMessageUtils.sendConsole(true, "I couldn't send an event notification as format_event is null for " + this.getName() + " chat.");
-            return;
-        }
-
-        ChatEventSentEvent event = new ChatEventSentEvent(this, player, eventName, eventMessage);
-        Bukkit.getScheduler().runTask(PrivateChats.getInstance(), () -> Bukkit.getPluginManager().callEvent(event));
-        if (event.isCancelled()) return;
-
-        for (Player online : Bukkit.getOnlinePlayers()) {
-            if (!online.hasPermission(this.getReadPerm())) continue;
-            if (this.hiddenPlayers.contains(online)) continue;
-
-            RyMessageUtils.sendPlayer(online, this.getFormatEvent()
-                    .replace("%player%", player.getName())
-                    .replace("%message%", eventMessage));
-
-        }
-
-        if (this.console) {
-            RyMessageUtils.sendConsole(false, this.getFormatEvent()
-                    .replace("%message%", eventMessage)
-                    .replace("%player%", player.getName()));
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void sendEventMessage(Player player, String eventName, String eventMessage, String result) {
-        if (this.getFormatEvent() == null) {
-            RyMessageUtils.sendConsole(false, RyMessageUtils.getErrorPrefix() +
-                    "I couldn't send an event notification as format_event is null for " + this.getName() + " chat.");
-            return;
-        }
-
-        ChatEventSentEvent event = new ChatEventSentEvent(this, player, eventName, eventMessage, result);
-        Bukkit.getScheduler().runTask(PrivateChats.getInstance(), () -> Bukkit.getPluginManager().callEvent(event));
-        if (event.isCancelled()) return;
-
-        for (Player online : Bukkit.getOnlinePlayers()) {
-            if (!online.hasPermission(this.getReadPerm())) continue;
-            if (this.hiddenPlayers.contains(online)) continue;
-
-            RyMessageUtils.sendPlayer(online, this.getFormatEvent()
-                    .replace("%message%", eventMessage)
-                    .replace("%player%", player.getName())
-                    .replace("%result%", result));
-
-        }
-        if (this.console) {
-            RyMessageUtils.sendConsole(false, this.getFormatEvent()
-                    .replace("%message%", eventMessage)
-                    .replace("%player%", player.getName())
-                    .replace("%result%", result));
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
     public void sendEventMessage(Player player, String eventName, String eventMessage, String result, Player target) {
-        if (this.getFormatEvent() == null) {
-            RyMessageUtils.sendConsole(false, RyMessageUtils.getErrorPrefix() +
-                    "I couldn't send an event notification as format_event is null for " + this.getName() + " chat.");
-            return;
-        }
-
-        ChatEventSentEvent event = new ChatEventSentEvent(this, player, eventName, eventMessage, result, target);
-        Bukkit.getScheduler().runTask(PrivateChats.getInstance(), () -> Bukkit.getPluginManager().callEvent(event));
-        if (event.isCancelled()) return;
-
-        for (Player online : Bukkit.getOnlinePlayers()) {
-            if (!online.hasPermission(this.getReadPerm())) continue;
-            if (this.hiddenPlayers.contains(online)) continue;
-
-            RyMessageUtils.sendPlayer(online, this.getFormatEvent()
-                    .replace("%message%", eventMessage)
-                    .replace("%player%", player.getName())
-                    .replace("%result%", result)
-                    .replace("%target%", target.getName()));
-
-        }
-        if (this.console) {
-            RyMessageUtils.sendConsole(false, this.getFormatEvent()
-                    .replace("%message%", eventMessage)
-                    .replace("%player%", player.getName())
-                    .replace("%result%", result)
-                    .replace("%target%", target.getName()));
-        }
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
-
-
-
 
 }

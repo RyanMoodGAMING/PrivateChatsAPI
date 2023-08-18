@@ -1,6 +1,8 @@
-package me.ryanmood.privatechats.api;
+package me.ryanmood.privatechats.api.spigot;
 
 import lombok.Getter;
+import me.ryanmood.privatechats.spigot.handlers.chats.ChatHandler;
+import me.ryanmood.privatechats.spigot.handlers.events.EventHandler;
 import org.bukkit.plugin.IllegalPluginAccessException;
 
 import java.util.UUID;
@@ -31,6 +33,12 @@ public final class PrivateChatsAPI {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public Map<String, CustomChat>
+    public ChatHandler getChatHandler() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
+
+    public EventHandler getEventHandler() {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
 }
