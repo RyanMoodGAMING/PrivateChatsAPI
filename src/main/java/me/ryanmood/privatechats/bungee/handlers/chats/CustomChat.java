@@ -132,6 +132,9 @@ public class CustomChat {
         throw new IllegalBungeePluginAccessException("PrivateChatsAPI is not registered!");
     }
 
+    public void sendMessage(String name, String message) {
+        throw new IllegalBungeePluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
     public void sendEventMessage(ProxiedPlayer player, String eventName, String eventMessage) {
         throw new IllegalBungeePluginAccessException("PrivateChatsAPI is not registered!");

@@ -137,6 +137,9 @@ public class CustomChat {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
+    public void sendMessage(String name, String message) {
+        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
     public void sendEventMessage(Player player, String eventName, String eventMessage) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
