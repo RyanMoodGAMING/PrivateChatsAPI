@@ -2,7 +2,6 @@ package me.ryanmood.privatechats.api.spigot.events.impl;
 
 import lombok.Getter;
 import me.ryanmood.privatechats.api.spigot.events.RyEvent;
-import me.ryanmood.privatechats.spigot.handlers.chats.CustomChat;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
