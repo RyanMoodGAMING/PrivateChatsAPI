@@ -9,143 +9,143 @@ import java.util.List;
 
 public class ChatsAPI {
 
-    public List<Player> getToggledPlayers() {
+    public List<Player> getToggledPlayers(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public List<Player> getHiddenPlayers() {
+    public List<Player> getHiddenPlayers(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getName() {
+    public String getName(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public List<String> getCommands() {
+    public List<String> getCommands(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getChatPrefix() {
+    public String getChatPrefix(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public Permission getSendPerm() {
+    public Permission getSendPerm(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public Permission getReadPerm() {
+    public Permission getReadPerm(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getFormatMessage() {
+    public String getFormatMessage(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getFormatEvent() {
+    public String getFormatEvent(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isEventMessage() {
+    public boolean isEventMessage(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isSentMessage() {
+    public boolean isSentMessage(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isConsole() {
+    public boolean isConsole(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isToggleEnabled() {
+    public boolean isToggleEnabled(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isUseCommandsAsToggle() {
+    public boolean isUseCommandsAsToggle(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getToggleMessage() {
+    public String getToggleMessage(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public List<String> getToggleCommands() {
+    public List<String> getToggleCommands(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isHideEnabled() {
+    public boolean isHideEnabled(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getHideMessage() {
+    public String getHideMessage(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public List<String> getHideCommands() {
+    public List<String> getHideCommands(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isChatPrefix() {
+    public boolean isChatPrefix(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getCommand() {
+    public String getCommand(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String[] getAliases() {
+    public String[] getAliases(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getToggleCommand() {
+    public String getToggleCommand(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String[] getToggleAliases() {
+    public String[] getToggleAliases(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getHideCommand() {
+    public String getHideCommand(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String[] getHideAliases() {
+    public String[] getHideAliases(String chatName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void toggleRemove(Player player) {
+    public void toggleRemove(String chatName, Player player) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void toggleAdd(Player player) {
+    public void toggleAdd(String chatName, Player player) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void hiddenRemove(Player player) {
+    public void hiddenRemove(String chatName, Player player) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void hiddenAdd(Player player) {
+    public void hiddenAdd(String chatName, Player player) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void sendMessage(@Nullable Player player, String message) {
+    public void sendMessage(String chatName, @Nullable Player player, String message) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void sendMessage(String name, String message) {
+    public void sendMessage(String chatName, String name, String message) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void sendEventMessage(Player player, String eventName, String eventMessage) {
+    public void sendEventMessage(String chatName, Player player, String eventName, String eventMessage) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void sendEventMessage(Player player, String eventName, String eventMessage, String result) {
+    public void sendEventMessage(String chatName, Player player, String eventName, String eventMessage, String result) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void sendEventMessage(Player player, String eventName, String eventMessage, String result, Player target) {
+    public void sendEventMessage(String chatName, Player player, String eventName, String eventMessage, String result, Player target) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 

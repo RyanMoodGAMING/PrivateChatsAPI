@@ -5,23 +5,23 @@ import org.bukkit.plugin.IllegalPluginAccessException;
 
 public class EventsAPI {
 
-    public String getEvent() {
+    public String getEvent(String eventName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public String getMessage() {
+    public String getMessage(String eventName) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void triggered(Player player) {
+    public void triggered(String eventName, Player player) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void triggered(Player player, String result) {
+    public void triggered(String eventName, Player player, String result) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public void triggered(Player player, String result, Player target) {
+    public void triggered(String eventName, Player player, String result, Player target) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
