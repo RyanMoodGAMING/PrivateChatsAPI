@@ -1,9 +1,9 @@
-package me.ryanmood.privatechats.spigot.handlers.events;
+package me.ryanmood.privatechats.api.spigot.managers;
 
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.IllegalPluginAccessException;
 
-public class CustomEvent {
+public class EventsAPI {
 
     public String getEvent() {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");

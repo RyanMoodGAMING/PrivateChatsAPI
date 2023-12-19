@@ -1,4 +1,4 @@
-package me.ryanmood.privatechats.spigot.handlers.chats;
+package me.ryanmood.privatechats.api.spigot.managers;
 
 import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
@@ -7,7 +7,7 @@ import org.bukkit.plugin.IllegalPluginAccessException;
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class CustomChat {
+public class ChatsAPI {
 
     public List<Player> getToggledPlayers() {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
@@ -126,10 +126,6 @@ public class CustomChat {
     }
 
     public void hiddenAdd(Player player) {
-        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
-    }
-
-    public static CustomChat getByChatPrefix(String chat_prefix) {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
