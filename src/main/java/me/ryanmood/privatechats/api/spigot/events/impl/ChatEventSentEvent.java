@@ -2,7 +2,6 @@ package me.ryanmood.privatechats.api.spigot.events.impl;
 
 import lombok.Getter;
 import me.ryanmood.privatechats.api.spigot.events.RyEvent;
-import me.ryanmood.privatechats.spigot.handlers.chats.CustomChat;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 
@@ -30,9 +29,9 @@ public class ChatEventSentEvent extends RyEvent implements Cancellable {
     private final Player target;
     private boolean isCancelled;
 
-    public ChatEventSentEvent(CustomChat chat, Player player, String eventName, String eventMessage, @Nullable String result,
+    public ChatEventSentEvent(String chatName, Player player, String eventName, String eventMessage, @Nullable String result,
                               @Nullable Player target) {
-        super(chat);
+        super(chatName);
         this.player = player;
         this.eventName = eventName;
         this.eventMessage = eventMessage;
@@ -41,12 +40,12 @@ public class ChatEventSentEvent extends RyEvent implements Cancellable {
         this.isCancelled = false;
     }
 
-    public ChatEventSentEvent(CustomChat chat, Player player, String eventName, String eventMessage) {
-        this(chat, player, eventName, eventMessage, null, null);
+    public ChatEventSentEvent(String chatName, Player player, String eventName, String eventMessage) {
+        this(chatName, player, eventName, eventMessage, null, null);
     }
 
-    public ChatEventSentEvent(CustomChat chat, Player player, String eventName, String eventMessage, String result) {
-        this(chat, player, eventName, eventMessage, result, null);
+    public ChatEventSentEvent(String chatName, Player player, String eventName, String eventMessage, String result) {
+        this(chatName, player, eventName, eventMessage, result, null);
     }
 
     @Override

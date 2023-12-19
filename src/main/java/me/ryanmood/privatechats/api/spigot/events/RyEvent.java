@@ -8,19 +8,19 @@ import org.bukkit.event.HandlerList;
 public class RyEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();
-    private final CustomChat chat;
+    private final String chatName;
 
-    public RyEvent(CustomChat chat) {
-        this(false, chat);
+    public RyEvent(String chatName) {
+        this(false, chatName);
     }
 
-    public RyEvent(boolean isAsync, CustomChat chat) {
+    public RyEvent(boolean isAsync, String chatName) {
         super(isAsync);
-        this.chat = chat;
+        this.chatName = chatName;
     }
 
-    public CustomChat getChat() {
-        return chat;
+    public String getChat() {
+        return chatName;
     }
 
     @Override

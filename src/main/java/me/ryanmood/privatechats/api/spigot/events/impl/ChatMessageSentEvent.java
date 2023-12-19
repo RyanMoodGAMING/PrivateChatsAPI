@@ -24,8 +24,8 @@ public class ChatMessageSentEvent extends RyEvent implements Cancellable {
     private final String message;
     private boolean isCancelled;
 
-    public ChatMessageSentEvent(CustomChat chat, boolean console, String name, @Nullable Player player, String message) {
-        super(chat);
+    public ChatMessageSentEvent(String chatName, boolean console, String name, @Nullable Player player, String message) {
+        super(chatName);
         this.console = console;
         this.name = name;
         this.player = player;
