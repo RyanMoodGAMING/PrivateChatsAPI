@@ -2,7 +2,6 @@ package me.ryanmood.privatechats.api.bungee.events.impl;
 
 import lombok.Getter;
 import me.ryanmood.privatechats.api.bungee.events.RyEvent;
-import me.ryanmood.privatechats.bungee.handlers.chats.CustomChat;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Cancellable;
 import org.jetbrains.annotations.Nullable;
@@ -29,9 +28,9 @@ public class ChatEventSentEvent extends RyEvent implements Cancellable {
     private final ProxiedPlayer target;
     private boolean isCancelled;
 
-    public ChatEventSentEvent(CustomChat chat, ProxiedPlayer player, String eventName, String eventMessage, @Nullable String result,
+    public ChatEventSentEvent(String chatName, ProxiedPlayer player, String eventName, String eventMessage, @Nullable String result,
                               @Nullable ProxiedPlayer target) {
-        super(chat);
+        super(chatName);
         this.player = player;
         this.eventName = eventName;
         this.eventMessage = eventMessage;
@@ -40,12 +39,12 @@ public class ChatEventSentEvent extends RyEvent implements Cancellable {
         this.isCancelled = false;
     }
 
-    public ChatEventSentEvent(CustomChat chat, ProxiedPlayer player, String eventName, String eventMessage) {
-        this(chat, player, eventName, eventMessage, null, null);
+    public ChatEventSentEvent(String chatName, ProxiedPlayer player, String eventName, String eventMessage) {
+        this(chatName, player, eventName, eventMessage, null, null);
     }
 
-    public ChatEventSentEvent(CustomChat chat, ProxiedPlayer player, String eventName, String eventMessage, String result) {
-        this(chat, player, eventName, eventMessage, result, null);
+    public ChatEventSentEvent(String chatName, ProxiedPlayer player, String eventName, String eventMessage, String result) {
+        this(chatName, player, eventName, eventMessage, result, null);
     }
 
     @Override
