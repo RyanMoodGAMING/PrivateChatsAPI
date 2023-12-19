@@ -18,7 +18,7 @@ public class RyEvent extends Event {
         this.chatName = chatName;
     }
 
-    public String getChat() {
+    public String getChatName() {
         return chatName;
     }
 
