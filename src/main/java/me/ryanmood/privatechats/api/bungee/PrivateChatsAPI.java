@@ -1,11 +1,13 @@
 package me.ryanmood.privatechats.api.bungee;
 
 import lombok.Getter;
+import me.ryanmood.privatechats.api.bungee.manager.ChatsAPI;
+import me.ryanmood.privatechats.api.bungee.manager.EventsAPI;
 import me.ryanmood.privatechats.api.bungee.util.IllegalBungeePluginAccessException;
-import org.bukkit.plugin.IllegalPluginAccessException;
 
 import java.util.UUID;
 
+@SuppressWarnings("unused")
 public final class PrivateChatsAPI {
 
     /**
@@ -29,12 +31,12 @@ public final class PrivateChatsAPI {
         throw new IllegalBungeePluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    /* public ChatHandler getChatHandler() {
-        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
+    public ChatsAPI getChatsAPI() {
+        throw new IllegalBungeePluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public EventHandler getEventHandler() {
-        throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
-    } */
+    public EventsAPI getEventsAPI() {
+        throw new IllegalBungeePluginAccessException("PrivateChatsAPI is not registered!");
+    }
 
 }
