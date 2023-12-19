@@ -61,7 +61,7 @@ public class CustomChat {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
-    public boolean isCommandsAsToggle() {
+    public boolean isUseCommandsAsToggle() {
         throw new IllegalPluginAccessException("PrivateChatsAPI is not registered!");
     }
 
