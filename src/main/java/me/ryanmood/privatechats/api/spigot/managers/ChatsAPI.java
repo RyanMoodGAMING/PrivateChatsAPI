@@ -7,6 +7,7 @@ import org.bukkit.plugin.IllegalPluginAccessException;
 import javax.annotation.Nullable;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class ChatsAPI {
 
     public List<Player> getToggledPlayers(String chatName) {

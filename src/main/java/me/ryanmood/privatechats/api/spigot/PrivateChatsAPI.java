@@ -1,6 +1,5 @@
 package me.ryanmood.privatechats.api.spigot;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import me.ryanmood.privatechats.api.spigot.managers.ChatsAPI;
 import me.ryanmood.privatechats.api.spigot.managers.EventsAPI;
@@ -8,6 +7,7 @@ import org.bukkit.plugin.IllegalPluginAccessException;
 
 import java.util.UUID;
 
+@SuppressWarnings("unused")
 public final class PrivateChatsAPI {
 
     /**

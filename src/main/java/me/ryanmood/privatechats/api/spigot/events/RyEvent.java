@@ -1,9 +1,9 @@
 package me.ryanmood.privatechats.api.spigot.events;
 
-import lombok.Getter;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
+@SuppressWarnings("unused")
 public class RyEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();

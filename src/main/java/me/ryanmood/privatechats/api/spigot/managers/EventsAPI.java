@@ -3,6 +3,7 @@ package me.ryanmood.privatechats.api.spigot.managers;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.IllegalPluginAccessException;
 
+@SuppressWarnings("unused")
 public class EventsAPI {
 
     public String getEvent(String eventName) {

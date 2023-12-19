@@ -7,6 +7,7 @@ import org.bukkit.event.Cancellable;
 
 import javax.annotation.Nullable;
 
+@SuppressWarnings("unused")
 public class ChatMessageSentEvent extends RyEvent implements Cancellable {
 
     @Getter
