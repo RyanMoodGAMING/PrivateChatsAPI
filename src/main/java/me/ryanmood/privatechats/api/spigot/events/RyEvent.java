@@ -1,7 +1,6 @@
 package me.ryanmood.privatechats.api.spigot.events;
 
 import lombok.Getter;
-import me.ryanmood.privatechats.spigot.handlers.chats.CustomChat;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
