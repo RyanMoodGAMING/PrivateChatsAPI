@@ -6,7 +6,7 @@
 
     <groupId>me.ryanmood</groupId>
     <artifactId>PrivateChatsAPI</artifactId>
-    <version>ALPHA-1.2</version>
+    <version>ALPHA-1.3</version>
     <packaging>jar</packaging>
 
     <name>PrivateChatsAPI</name>
