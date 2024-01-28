@@ -1,8 +1,8 @@
 package me.ryanmood.privatechats.api.bungee;
 
 import lombok.Getter;
-import me.ryanmood.privatechats.api.bungee.manager.ChatsAPI;
-import me.ryanmood.privatechats.api.bungee.manager.EventsAPI;
+import me.ryanmood.privatechats.api.bungee.managers.ChatsAPI;
+import me.ryanmood.privatechats.api.bungee.managers.EventsAPI;
 import me.ryanmood.privatechats.api.bungee.util.IllegalBungeePluginAccessException;
 
 import java.util.UUID;

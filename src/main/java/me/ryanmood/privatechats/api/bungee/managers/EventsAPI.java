@@ -1,4 +1,4 @@
-package me.ryanmood.privatechats.api.bungee.manager;
+package me.ryanmood.privatechats.api.bungee.managers;
 
 import me.ryanmood.privatechats.api.bungee.util.IllegalBungeePluginAccessException;
 

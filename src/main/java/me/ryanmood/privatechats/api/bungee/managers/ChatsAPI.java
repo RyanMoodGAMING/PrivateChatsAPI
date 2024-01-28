@@ -1,6 +1,5 @@
-package me.ryanmood.privatechats.api.bungee.manager;
+package me.ryanmood.privatechats.api.bungee.managers;
 
-import me.ryanmood.privatechats.api.bungee.PrivateChatsAPI;
 import me.ryanmood.privatechats.api.bungee.util.IllegalBungeePluginAccessException;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import org.jetbrains.annotations.Nullable;
