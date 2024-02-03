@@ -112,8 +112,8 @@
 
     <distributionManagement>
         <repository>
-            <id>ryanmood-repo-private</id>
-            <url>https://repo.ryanmood.me/private</url>
+            <id>ryanmood-repo</id>
+            <url>https://repo.ryanmood.me/releases/</url>
         </repository>
     </distributionManagement>
 
